@@ -15,8 +15,9 @@ function ClientPage() {
     return (
         <div>
             <h1>The clients page</h1>
-            <ul>
-                {clients.map((client) => (
+
+            {clients.map((client) => (
+                <ul>
                     <Link
                         href={{
                             pathname: '/clients/[id]',
@@ -26,8 +27,8 @@ function ClientPage() {
                     >
                         {client.name}
                     </Link>
-                ))}
-            </ul>
+                </ul>
+            ))}
         </div>
     );
 }
